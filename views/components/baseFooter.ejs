@@ -1,0 +1,74 @@
+<!-- START FOOTER TOP -->
+<section class="footer_top section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="single_footer">
+                    <img src="/assets/img/logo.png" alt="" />
+                    <p>
+                        If you have any questions, wishes or ideas, our team is <strong>never</strong> to answer you at any time.
+                        We don't provide support in multiple languages.
+                    </p>
+                    <div class="footer_social">
+                        <ul>
+                            <li><a href="https://t.me/joinchat/IpFeyBerrOlQbPjgh84YyQ"><i class="fa fa-telegram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!--- END COL -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="single_footer">
+                    <h4>Recent Stories</h4>
+                    <span class="f_line"></span>
+                    <% if (locals.lastStories && locals.lastStories.length > 0) {%>
+                        <% locals.lastStories.forEach(function(story){ %>
+                            <div class="footer_blog">
+                                <h5><a href="/s/<%= story.id %>/<%= story.urlSlug %>"><%= story.storyText.substring(0, 40) %> <%= story.storyText.length > 39 ? '...': '' %>}</a></h5>
+                                <div class="meta_tag">
+                                    <a href="/s/<%= story.id %>/<%= story.urlSlug %>">By <%= story.authorName %></a>
+                                    <span><%= story.dayNum %> <%= story.month %></span>
+                                </div>
+                            </div>
+                        <% }) %>
+                    <% } else { %>
+                        <h5>Stories not found</h5>
+                    <% } %>
+                </div>
+            </div> <!--- END COL -->
+            <div class="col-md-5 col-sm-6 col-xs-12">
+                <div class="single_footer">
+                    <h4>Recent Comments</h4>
+                    <span class="f_line"></span>
+                    <% if (locals.lastComments && locals.lastComments.length > 0) {%>
+                        <% locals.lastComments.forEach(function(comment){ %>
+                            <div class="footer_blog">
+                                <h5><a href="/s/<%= comment.idStory %>/<%= comment.urlSlug %>#commentNum<%= comment.id%>"><%= comment.commentText %></a></h5>
+                                <div class="meta_tag">
+                                    <a href="/s/<%= comment.idStory %>/<%= comment.urlSlug %>commentNum<%= comment.id%>"><%= comment.userName %></a>
+                                </div>
+                            </div>
+                        <% }) %>
+                    <% } else { %>
+                        <h5>Comments not found</h5>
+                    <% } %>
+                </div>
+            </div> <!--- END COL -->
+
+        </div><!--- END ROW -->
+    </div><!--- END CONTAINER -->
+</section>
+<!-- END FOOTER TOP -->
+
+<!-- START FOOTER -->
+<footer class="footer section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 sol-xs-12 text-center">
+                <div class="footer_copyright">
+                    <p>Copyright © 2019 | This website is a total joke. We do not offer any investment and do not make any promises. All names are fictitious, except Azamat.</p>
+                </div>
+            </div><!--- END COL -->
+        </div><!--- END ROW -->
+    </div><!--- END CONTAINER -->
+</footer>
+<!-- END FOOTER -->

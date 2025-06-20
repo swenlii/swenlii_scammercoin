@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- SITE TITLE -->
+    <title>Order an email address on scammer coin (scammerCoin) website. To the moon!</title>
+    <!-- Latest Bootstrap min CSS -->
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,500i,700,700i" rel="stylesheet">
+    <!--Favicon for this site -->
+    <link rel="icon" type="image/ico" href="/assets/img/favicon.png"/>
+    <!-- font awesome min CSS -->
+    <link rel="stylesheet" href="/assets/fonts/font-awesome.min.css">
+    <!--- owl carousel Css-->
+    <link rel="stylesheet" href="/assets/owlcarousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="/assets/owlcarousel/css/owl.theme.css">
+    <!-- MAGNIFIC CSS -->
+    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body data-spy="scroll" data-offset="80">
+
+<%- include('components/baseHeader.ejs')%>
+<!-- START SECTION TOP -->
+<section class="section-top">
+    <div class="container">
+        <div class="col-md-10 col-md-offset-1 col-xs-12 text-center">
+            <div class="section-top-title wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0">
+                <h1>Buy email on this domain</h1>
+                <ol class="breadcrumb">
+                    <li><a href="/">Home</a></li>
+                    <li class="active">Buy email</li>
+                </ol>
+            </div><!-- //.HERO-TEXT -->
+        </div><!--- END COL -->
+    </div><!--- END CONTAINER -->
+</section>
+<!-- END SECTION TOP -->
+
+<section class="contact_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-sm-12 col-xs-12 no-padding" data-aos="fade-up">
+                <div class="shop-slide">
+                    <div class="shop-img">
+                        <img src="/images/emailDomain.jpg" class="img-responsive" alt="">
+                        <div class="shop_category"><a href="/">Order via the form</a></div>
+                    </div>
+                    <div class="shop-review">
+                        <h3 class="shop-title"><a href="#">Prestigious email address</a></h3>
+                        <p class="shop-description">
+                            Mail for a successful entrepreneur. Works through the service <a href="https://mail.yandex.com/" target="_blank">mail.yandex.com</a>. All modern features. Anti-spam, IMAP, unlimited disk space, anti-virus, iOS & Android apps and so on.
+                        </p>
+                        <div class="shop-bar">
+									<span>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</span>
+                            <span class="shop_comments">$99/2 years</span>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- END COL -->
+            <div class="col-lg-7 col-sm-12 col-xs-12 no-padding" data-aos="fade-up">
+
+                <div class="contact" style="padding-top: 0">
+                    <h1 style="padding-bottom: 15px">Order an email address</h1>
+                    <form id="contact-form" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <input type="text" name="name" class="form-control" id="first-name" placeholder="Your Name" required="required">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="email" name="email" class="form-control" id="first-email" placeholder="Your Email" required="required">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="text" name="subject" class="form-control" id="subject" placeholder="Subject" value="Order an email" required="required">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <textarea rows="6" name="message" class="form-control" id="description" placeholder="Enter the desired name, payment only in cryptocurrency" required="required"></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="actions">
+                                    <input type="submit" value="Order an email address" name="submit" id="submitButton" class="btn btn-lg btn-contact-bg" title="Submit Your Message!" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div><!-- END COL -->
+        </div><!--- END ROW -->
+    </div><!--- END CONTAINER -->
+</section>
+<!-- END CONTACT FORM -->
+
+<%- include('components/baseFooter.ejs')%>
+
+<%- include('components/scripts.ejs')%>
+
+<script>
+    $('#contact-form').submit(function (event) {
+        event.preventDefault();
+        var obj = {
+            name: document.getElementById('first-name').value,
+            email: document.getElementById('first-email').value,
+            subject: document.getElementById('subject').value,
+            text: document.getElementById('description').value
+        }
+        socket.emit('sendMessage', obj, function (err, answer) {
+            if(err){
+                swal('Error', err, 'error');
+            }
+            else {
+                swal('Success', 'Message sent. We will respond in a short time!', 'success');
+            }
+        })
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "name": "scammercoin.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.1",
+    "big.js": "^5.2.2",
+    "binance-api-node": "^0.9.12",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "mysql": "^2.17.1",
+    "mysql2": "^2.1.0",
+    "node-binance-api": "^0.9.9",
+    "node-telegram-bot-api": "^0.40.0",
+    "nodemailer": "^6.4.2",
+    "particlesjs": "^2.2.3",
+    "redis": "^2.8.0",
+    "slugify": "^1.3.6",
+    "socket.io": "^2.3.0",
+    "vue": "^2.6.11"
+  }
+}
