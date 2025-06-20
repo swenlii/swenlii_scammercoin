@@ -1,0 +1,1 @@
+# swenlii_scammercoin
